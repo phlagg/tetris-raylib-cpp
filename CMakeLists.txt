@@ -113,8 +113,8 @@ if (LINUX)
   # (Source: https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html)
   target_link_options(${GAME_EXE} PRIVATE -static-libgcc -static-libstdc++)
   target_link_libraries(${GAME_EXE} PRIVATE raylib_cpp raylib) # CMAKE generates the linker flags
-  target_link_options(${TESTS_EXE} PRIVATE -static-libgcc -static-libstdc++)
-  target_link_libraries(${TESTS_EXE} PRIVATE raylib_cpp raylib) # CMAKE generates the linker flags
+  # target_link_options(${TESTS_EXE} PRIVATE -static-libgcc -static-libstdc++)
+  # target_link_libraries(${TESTS_EXE} PRIVATE raylib_cpp raylib) # CMAKE generates the linker flags
 endif()
 
 if (APPLE)

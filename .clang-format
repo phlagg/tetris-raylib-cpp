@@ -1,0 +1,13 @@
+
+---
+BasedOnStyle: Chromium
+AllowAllConstructorInitializersOnNextLine: 'false'
+ColumnLimit: '110'
+ConstructorInitializerIndentWidth: '4'
+IndentWidth: '2'
+AccessModifierOffset: -2
+IndentAccessModifiers: 'true'
+AlwaysBreakTemplateDeclarations: Multiline
+AllowSHortFunctionsOnASingleLine: Empty
+
+...

@@ -159,14 +159,14 @@ endif()
 
 # ===================== Create Upload Directory for GitHub Release =========================
 
-add_custom_target(
-    package_for_upload ALL # make sure this is always run
-    COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different ${CMAKE_CURRENT_SOURCE_DIR}/assets ${CMAKE_BINARY_DIR}/upload/resources
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:${PROJECT_NAME}> ${CMAKE_BINARY_DIR}/upload/bin/$<TARGET_FILE_NAME:${PROJECT_NAME}>
-    # COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:tests> ${CMAKE_BINARY_DIR}/upload/bin/$<TARGET_FILE_NAME:tests>
-    # COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different ${CMAKE_BINARY_DIR}/html ${CMAKE_BINARY_DIR}/upload/doxygen
+# add_custom_target(
+#     package_for_upload ALL # make sure this is always run
+#     COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different ${CMAKE_CURRENT_SOURCE_DIR}/assets ${CMAKE_BINARY_DIR}/upload/resources
+#     COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:${PROJECT_NAME}> ${CMAKE_BINARY_DIR}/upload/bin/$<TARGET_FILE_NAME:${PROJECT_NAME}>
+#     COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:tests> ${CMAKE_BINARY_DIR}/upload/bin/$<TARGET_FILE_NAME:tests>
+#     COMMAND ${CMAKE_COMMAND} -E copy_directory_if_different ${CMAKE_BINARY_DIR}/html ${CMAKE_BINARY_DIR}/upload/doxygen
 
-)
+# )
 
 # ======================================== CTest ============================================
 

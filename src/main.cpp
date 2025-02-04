@@ -1,20 +1,15 @@
-#include <math.h>
-#include <cstdint>
 #include "game.h"
+#include "settings.h"
 
-#include "raylib-cpp.hpp"
-#include "raymath.h"
-
-uint32_t screenWidth = 800;
-uint32_t screenHeight = 600;
+#include <math.h>
 
 int main() {
   SetExitKey(KEY_ESCAPE);
   SetTargetFPS(1200);
 
-  Game game{screenWidth, screenHeight, 1200, "Tetris Raylib"};
+  Game game{ settings::screenWidth, settings::screenHeight, settings::fps, "Tetris Raylib" };
 
-  while (!game.GameShouldClose()) {
+  while(!game.GameShouldClose()) {
     game.Tick();
   }
 

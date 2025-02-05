@@ -42,10 +42,10 @@ void Board::DrawBorder() const {
 }
 
 void Board::Draw() const {
-  for(size_t iY = 0; iY < m_height; iY++) {
-    for(size_t iX = 0; iX < m_width; iX++) {
-      if(CellExists({ static_cast<unsigned int>(iX), static_cast<unsigned int>(iY) })) {
-        DrawCell({ static_cast<unsigned int>(iX), static_cast<unsigned int>(iY) });
+  for(std::size_t iY = 0; iY < m_height; iY++) {
+    for(std::size_t iX = 0; iX < m_width; iX++) {
+      if(CellExists({ uint32_t(iX), uint32_t(iY) })) {
+        DrawCell({ uint32_t(iX), uint32_t(iY) });
       }
     }
   }

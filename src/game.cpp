@@ -32,4 +32,11 @@ void Game::Draw() {
   m_board.Draw();
   m_tetromino.Draw();
 }
-void Game::Update() {}
+void Game::Update() {
+  if(IsKeyPressed(KEY_E) || IsKeyPressed(KEY_SPACE)) {
+    m_tetromino.RotateClockwise();
+  }
+  if(IsKeyPressed(KEY_Q)) {
+    m_tetromino.RotateCounterClockwise();
+  }
+}

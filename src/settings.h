@@ -1,23 +1,34 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
-
-#include "vec2.h"
 #include <cstdint>
+#include <iostream>
+#include <raylib.h>
 
 namespace settings {
 
   // Window settings
   inline constexpr uint32_t scale = 2;
-  inline constexpr uint32_t screenWidth = 800 * scale;
+  inline constexpr uint32_t screenWidth = 300 * scale;
   inline constexpr uint32_t screenHeight = 600 * scale;
-  inline constexpr uint32_t fps = 1200;
+  inline constexpr uint32_t fps = 600;
 
   // Board settings
-  inline constexpr uint32_t cellSize = 23 * scale;
-  inline constexpr uint32_t padding = 2 * scale;
-  inline constexpr Vec2<uint32_t> boardPosition{ 250 * scale, 70 * scale };
-  inline constexpr Vec2<uint32_t> boardWidthHeight{ 10, 20 };
+  inline constexpr uint32_t cellSize = 30 * scale;
+  inline constexpr uint32_t padding = 1 * scale;
+  inline constexpr uint32_t numCols = 10;
+  inline constexpr uint32_t numRows = 20;
 
+  // Game settings
+  inline constexpr uint32_t COLOR_COUNT = 7;
+  // Debug
+  static void PrintTest() { std::cout << "Timer Elapsed" << std::endl; }
 } // namespace settings
+
+namespace colors {
+  inline const Color darkGreen = { 20, 160, 133, 255 };
+  inline const Color darkBlue = { 44, 44, 127, 255 };
+  inline Color background = darkBlue;
+
+}
 
 #endif /* SETTINGS_H */

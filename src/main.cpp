@@ -1,17 +1,26 @@
-#include "game.h"
+#include "blocks.cpp"
+#include "grid.h"
 #include "settings.h"
-
-#include <math.h>
-
+#include <raylib.h>
 int main() {
+
+  InitWindow(settings::screenWidth, settings::screenHeight, "Tetris-Raylib-Cpp");
+  SetTargetFPS(settings::fps);
   SetExitKey(KEY_ESCAPE);
-  SetTargetFPS(1200);
 
-  Game game{ settings::screenWidth, settings::screenHeight, settings::fps, "Tetris Raylib" };
+  Grid grid{};
+  grid.Print();
 
-  while(!game.GameShouldClose()) {
-    game.Tick();
+  LBlock block;
+
+  while(!WindowShouldClose()) {
+
+    BeginDrawing();
+    ClearBackground(colors::background);
+    grid.Draw();
+    block.Draw();
+    EndDrawing();
   }
 
-  return 0;
+  CloseWindow();
 }

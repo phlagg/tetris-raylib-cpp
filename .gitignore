@@ -13,3 +13,4 @@ build
 .cache/clangd
 settings.json
 launch.json
+.vscode/c_cpp_properties.json

@@ -9,4 +9,8 @@ constexpr Color purple = { 166, 0, 247, 255 };
 constexpr Color cyan = { 21, 204, 209, 255 };
 constexpr Color blue = { 13, 64, 216, 255 };
 
+constexpr Color darkGreen = { 20, 160, 133, 255 };
+constexpr Color darkBlue = { 44, 44, 127, 255 };
+constexpr Color background = darkBlue;
+
 std::vector<Color> GetCellColors() { return { darkGrey, green, red, orange, yellow, purple, cyan, blue }; }

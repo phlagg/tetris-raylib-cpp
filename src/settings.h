@@ -24,11 +24,4 @@ namespace settings {
   static void PrintTest() { std::cout << "Timer Elapsed" << std::endl; }
 } // namespace settings
 
-namespace colors {
-  inline const Color darkGreen = { 20, 160, 133, 255 };
-  inline const Color darkBlue = { 44, 44, 127, 255 };
-  inline Color background = darkBlue;
-
-}
-
 #endif /* SETTINGS_H */

@@ -11,6 +11,7 @@ class Grid {
   void Initialize();
   void Print();
   void Draw();
+  bool IsCellOutside(uint32_t row, uint32_t column);
   uint32_t grid[20][10];
 
  private:

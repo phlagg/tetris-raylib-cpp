@@ -3,6 +3,7 @@
 
 #include "position.h"
 #include "raylib.h"
+
 #include <cstdint>
 #include <map>
 #include <vector>
@@ -10,7 +11,7 @@
 class Block {
  public:
   Block();
-  void Draw();
+  void Draw(uint32_t offsetX, uint32_t offsetY);
   void Move(int32_t rows, int32_t columns);
   std::vector<Position> GetCellPositions();
   void Rotate();

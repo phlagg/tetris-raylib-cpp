@@ -24,6 +24,7 @@ class Grid {
   uint32_t m_numCols;
   uint32_t m_cellSize;
   uint32_t m_cellPadding;
+  uint32_t m_outerPadding;
   std::vector<Color> m_colors;
 };
 

@@ -7,11 +7,12 @@ Block::Block()
     : m_cellSize(settings::cellSize), m_rotationState(0), m_cellPadding(settings::padding),
       m_colors(GetCellColors()), m_rowOffset(0), m_columnOffset(0) {}
 
-void Block::Draw() {
+void Block::Draw(uint32_t offsetX, uint32_t offsetY) {
   std::vector<Position> tiles = GetCellPositions();
   for(Position item : tiles) {
-    DrawRectangle(item.col * m_cellSize + m_cellPadding, item.row * m_cellSize + m_cellPadding,
-                  m_cellSize - m_cellPadding, m_cellSize - m_cellPadding, m_colors[id]);
+    DrawRectangle(item.col * m_cellSize + m_cellPadding + offsetX,
+                  item.row * m_cellSize + m_cellPadding + offsetY, m_cellSize - m_cellPadding,
+                  m_cellSize - m_cellPadding, m_colors[id]);
   }
 }
 

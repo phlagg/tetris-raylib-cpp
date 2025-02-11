@@ -8,13 +8,14 @@ namespace settings {
 
   // Window settings
   inline constexpr uint32_t scale = 2;
-  inline constexpr uint32_t screenWidth = 300 * scale;
-  inline constexpr uint32_t screenHeight = 600 * scale;
+  inline constexpr uint32_t screenWidth = 500 * scale;
+  inline constexpr uint32_t screenHeight = 620 * scale;
   inline constexpr uint32_t fps = 600;
 
   // Board settings
   inline constexpr uint32_t cellSize = 30 * scale;
   inline constexpr uint32_t padding = 1 * scale;
+  inline constexpr uint32_t outerPadding = 10 * scale;
   inline constexpr uint32_t numCols = 10;
   inline constexpr uint32_t numRows = 20;
 

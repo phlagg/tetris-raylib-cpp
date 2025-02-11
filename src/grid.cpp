@@ -5,7 +5,7 @@
 
 Grid::Grid()
     : m_numCols(settings::numCols), m_numRows(settings::numRows), m_cellSize(settings::cellSize),
-      m_cellPadding(settings::padding), m_colors(GetCellColors()) {
+      m_cellPadding(settings::padding), m_outerPadding(settings::outerPadding), m_colors(GetCellColors()) {
   Initialize();
 }
 
@@ -30,8 +30,9 @@ void Grid::Draw() {
   for(size_t row = 0; row < m_numRows; row++) {
     for(size_t col = 0; col < m_numCols; col++) {
       uint32_t cellValue = grid[row][col];
-      DrawRectangle(col * m_cellSize + m_cellPadding, row * m_cellSize + m_cellPadding,
-                    m_cellSize - m_cellPadding, m_cellSize - m_cellPadding, m_colors[cellValue]);
+      DrawRectangle(col * m_cellSize + m_cellPadding + m_outerPadding,
+                    row * m_cellSize + m_cellPadding + m_outerPadding, m_cellSize - m_cellPadding,
+                    m_cellSize - m_cellPadding, m_colors[cellValue]);
     }
   }
 }

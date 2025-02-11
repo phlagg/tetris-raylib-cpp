@@ -12,7 +12,8 @@ extern const Color purple;
 extern const Color cyan;
 extern const Color blue;
 extern const Color background;
-
+extern const Color darkBlue;
+extern const Color lightBlue;
 std::vector<Color> GetCellColors();
 
 #endif /* COLORS_H */
